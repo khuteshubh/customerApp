@@ -17,7 +17,6 @@ import {zodResolver} from "@hookform/resolvers/zod";
 import {  useForm } from "react-hook-form";
 import { Button } from "@/components/ui/button";
 import toast from 'react-hot-toast';
-import { Bounce } from 'react-toastify';
 import { useRouter} from "next/navigation";
 
 
@@ -47,7 +46,7 @@ const page3 = () => {
   
   const router = useRouter();
   const handleSubmit = async (data1: z.infer<typeof finalSchema> ) =>{
-    // console.log(data1);
+    console.log(data1);
     
     const response = await setServerSideData(data1);
 
@@ -55,16 +54,7 @@ const page3 = () => {
       toast.success(response.success, {
             position: "top-center",
             duration : 2000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-            theme: "light",
-            transition: Bounce,
             });
-            
-          
             router.push("/");
 
     }
