@@ -1,7 +1,7 @@
 "use client";
 
 import { finalSchema } from '@/Schema';
-import { setServerSideData } from '@/action/add-formData-action';
+import { setServerSideData } from '@/app/action/add-formData-action';
 
 import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from "@/components/ui/form";
 import {
