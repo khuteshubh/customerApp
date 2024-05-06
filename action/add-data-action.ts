@@ -4,6 +4,7 @@
 
 import { supabase} from '@/lib/Supabase/createClient';
 import { finalSchema } from '@/Schema/index';
+import { NextApiRequest, NextApiResponse } from 'next';
 import { revalidatePath } from 'next/cache';
 
 export const setServerSideData = async (data1: any)=>{
@@ -49,3 +50,7 @@ export const setServerSideData = async (data1: any)=>{
     
 
     };
+
+
+ 
+
